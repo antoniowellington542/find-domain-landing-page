@@ -1,39 +1,34 @@
 // middleware/rateLimit.ts
 import { NextRequest, NextResponse } from 'next/server';
 
-interface RateLimitStore {
-    [ip: string]: number[];
-}
+// Use a Map to store rate limit data
+const rateLimitStore = new Map<string, number[]>();
 
-declare global {
-    var rateLimitStore: RateLimitStore;
-}
-
-export function rateLimit(req: NextRequest, res: NextResponse) {
+export function rateLimit(req: NextRequest) {
     const rateLimitWindow = 60 * 1000; // 1 minute
-    const maxRequests = 2; // Max requests per window (per minute)
+    const maxRequests = 4; // Max requests per window (per minute)
     const ip = req.headers.get('x-forwarded-for')?.split(',')[0] || '';
 
-    if (!global.rateLimitStore) {
-        global.rateLimitStore = {}; // Initialize store if not yet defined
-    }
-
-    if (!global.rateLimitStore[ip]) {
-        global.rateLimitStore[ip] = [];
+    if (!rateLimitStore.has(ip)) {
+        rateLimitStore.set(ip, []);
     }
 
     const now = Date.now();
-    global.rateLimitStore[ip] = global.rateLimitStore[ip].filter(
-        (timestamp) => now - timestamp < rateLimitWindow
-    );
+    const timestamps = rateLimitStore.get(ip)!;
 
-    if (global.rateLimitStore[ip].length >= maxRequests) {
+    // Filter out requests that are outside the rate limit window
+    rateLimitStore.set(ip, timestamps.filter((timestamp) => now - timestamp < rateLimitWindow));
+
+    // If the number of requests exceeds the maxRequests, return rate-limited response
+    if (rateLimitStore.get(ip)!.length >= maxRequests) {
         return NextResponse.json(
             { error: 'Too many requests, please try again later.' },
             { status: 429 }
         );
     }
 
-    global.rateLimitStore[ip].push(now);
+    // Add the current timestamp to the store
+    rateLimitStore.get(ip)!.push(now);
+
     return null; // Allow the request to continue
 }

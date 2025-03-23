@@ -5,8 +5,8 @@ import whoisConfig from "@/config/whoisConfig";
 import { rateLimit } from '@/app/api/middleware/rateLimit';
 
 // Definição do método GET
-export async function GET(req: NextRequest, res: NextResponse) {
-    const rateLimitResponse = rateLimit(req, res);
+export async function GET(req: NextRequest) {
+    const rateLimitResponse = rateLimit(req);
 
     if (rateLimitResponse) {
         return rateLimitResponse; // If rate-limiting is triggered, return the response
@@ -22,9 +22,9 @@ export async function GET(req: NextRequest, res: NextResponse) {
     try {
         const response = await axios.get(`https://api.whoisfreaks.com/v1.0/whois?apiKey=${whoisConfig.whoisFreaksApiKey}&whois=live&domainName=${domain}`);
         return NextResponse.json(response.data);
-    } catch (error: any) {
+    } catch (error) {
         return NextResponse.json(
-            { error: 'Failed to fetch Whois data', details: error.message },
+            { error: 'Failed to fetch Whois data', details: error },
             { status: 500 }
         );
     }

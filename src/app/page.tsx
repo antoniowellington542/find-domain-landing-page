@@ -6,8 +6,7 @@ import Image from "next/image";
 
 import NandBoxIcon from "@/assets/nandbox_icon.svg";
 import SearchIcon from "@/assets/search_icon.svg";
-import DomainCard from "./card";
-import axios from "axios";
+import DomainCard from "@/app/card";
 
 import { pageStyles } from "@/app/styles";
 import { DomainInfoFormattedForClient, WhoisResponse } from "@/protocols/whoisFreaksProtocol";
