@@ -35,16 +35,16 @@ const NavBar = () => {
                     </button>
                 </div>
                 <PopoverGroup className="hidden lg:flex lg:items-center lg:gap-x-12">
-                    <a href="#" className="text-sm/6 font-semibold text-gray-500 hover:text-blue-500">
+                    <a href="#header" className="text-sm/6 font-semibold text-gray-500 hover:text-blue-500">
                         Início
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-gray-500 hover:text-blue-500">
+                    <a href="#about" className="text-sm/6 font-semibold text-gray-500 hover:text-blue-500">
                         Sobre
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-gray-500 hover:text-blue-500">
+                    <a href="#plans" className="text-sm/6 font-semibold text-gray-500 hover:text-blue-500">
                         Planos
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-gray-500 hover:text-blue-500">
+                    <a href="#faqs" className="text-sm/6 font-semibold text-gray-500 hover:text-blue-500">
                         FAQs
                     </a>
                 </PopoverGroup>

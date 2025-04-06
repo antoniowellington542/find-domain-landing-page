@@ -6,7 +6,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/solid"
 
 const About = () => {
     return (
-        <section className="flex items-center justify-center">
+        <section id="about" className="flex items-center justify-center py-20">
             <div className="flex flex-1 flex-col lg:flex-row items-start justify-start gap-10">
                 <div className="flex flex-1/2 items-center justify-start">
                     <Image

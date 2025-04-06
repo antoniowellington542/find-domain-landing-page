@@ -29,7 +29,7 @@ const items: Array<AccordionProps> = [
 
 const Faqs = () => {
     return (
-        <section className="flex items-center justify-center py-10">
+        <section id="faqs" className="flex items-center justify-center py-10">
             <div className="flex flex-1 flex-col items-center justify-items gap-2">
                 <span className="text-3xl lg:text-5xl text-gray-800 font-medium">Perguntas Frequentes</span>
                 <div className="mx-auto w-full max-w-2xl flex flex-col gap-4 py-10">

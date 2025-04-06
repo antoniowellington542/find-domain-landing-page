@@ -9,7 +9,7 @@ import ChecksIcon from "@/assets/checks_icon.svg"
 
 const Header = () => {
     return (
-        <section className="flex py-10 justify-center">
+        <section id="header" className="flex py-10 justify-center">
             <div className="flex flex-1 flex-col lg:flex-row items-center justify-center gap-4 py-10 lg:py-0">
                 <div className="flex flex-col flex-1/2 items-center justify-center gap-8">
                     <div className="flex flex-col gap-8">

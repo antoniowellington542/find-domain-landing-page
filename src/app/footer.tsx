@@ -19,16 +19,16 @@ const Footer = () => {
                     <span className="text-3xl text-white">NandBox</span>
                 </div>
                 <PopoverGroup className="flex flex-col lg:flex-row flex-1 items-center gap-y-12 lg:gap-x-12">
-                    <a href="#" className="text-sm/6 font-semibold text-gray-300 hover:text-blue-500">
+                    <a href="#header" className="text-sm/6 font-semibold text-gray-300 hover:text-blue-500">
                         Início
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-gray-300 hover:text-blue-500">
+                    <a href="#about" className="text-sm/6 font-semibold text-gray-300 hover:text-blue-500">
                         Sobre
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-gray-300 hover:text-blue-500">
+                    <a href="#plans" className="text-sm/6 font-semibold text-gray-300 hover:text-blue-500">
                         Planos
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-gray-300 hover:text-blue-500">
+                    <a href="#faqs" className="text-sm/6 font-semibold text-gray-300 hover:text-blue-500">
                         FAQs
                     </a>
                 </PopoverGroup>
