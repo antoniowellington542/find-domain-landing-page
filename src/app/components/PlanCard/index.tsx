@@ -1,10 +1,13 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid"
-import React from "react"
+import React, { ReactNode } from "react"
 
 export type PlanCardProps = {
     title: string
     price: string
-    benefits: Array<React.JSX.Element>
+    benefits: Array<{
+        icon: ReactNode
+        description: React.JSX.Element
+    }>
     customStyle: {
         backgroundColor: string
         titleColor: string
@@ -59,9 +62,12 @@ const PlanCard = (props: PlanCardProps) => {
                             color: customStyle.priceColor
                         }}
                     >
-                        {benefits.map((benefit) => {
-                            return benefit
-                        })}
+                        {benefits.map((benefit, index) => (
+                            <div className="flex flex-row items-center gap-2" key={index}>
+                                {benefit.icon}
+                                {benefit.description}
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <div className="flex justify-center items-center">

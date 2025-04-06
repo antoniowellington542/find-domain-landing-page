@@ -6,6 +6,9 @@ import {
     Dialog,
     DialogPanel,
 } from "@headlessui/react"
+import Image from "next/image"
+
+import NandBoxIcon from "@/assets/nandbox_icon.svg"
 
 const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -14,9 +17,9 @@ const NavBar = () => {
         <header className="px-4 lg:px-52 bg-white">
             <nav className="mx-auto flex w-full items-center justify-between py-6">
                 <div className="flex items-center gap-2 lg:flex-1">
-                    <img
-                        alt=""
-                        src="nandbox_icon.svg"
+                    <Image
+                        alt="logo"
+                        src={NandBoxIcon}
                         className="h-8 w-auto"
                     />
                     <span className="text-3xl text-black">NandBox</span>
@@ -56,9 +59,9 @@ const NavBar = () => {
                 <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                            <img
-                                alt=""
-                                src="nandbox_icon.svg"
+                            <Image
+                                alt="logo"
+                                src={NandBoxIcon}
                                 className="h-8 w-auto"
                             />
                             <span className="text-3xl text-black">NandBox</span>

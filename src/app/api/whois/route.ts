@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import axios from 'axios';
-import whoisConfig from "@/config/whoisConfig";
+import { whoisConfig } from "@/config/whoisConfig";
 import { rateLimit } from '@/app/api/middleware/rateLimit';
 
 // Definição do método GET

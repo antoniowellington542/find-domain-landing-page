@@ -19,12 +19,12 @@ const Accordion = (props: AccordionProps) => {
             defaultOpen={true}
         >
             <DisclosureButton className="group flex w-full items-center justify-between">
-                <span className="text-[14px] font-medium text-gray-600 group-data-[hover]:fill-gray-500">
+                <span className="text-[14px] font-semibold text-gray-600 group-data-[hover]:fill-gray-500">
                     {title}
                 </span>
                 <ChevronDownIcon className="size-5 fill-black group-data-[hover]:fill-gray-500 group-data-[open]:rotate-180" />
             </DisclosureButton>
-            <DisclosurePanel className="mt-4 text-sm text-gray-600">
+            <DisclosurePanel className="mt-4 text-sm font-light text-gray-600">
                 {description}
             </DisclosurePanel>
         </Disclosure>

@@ -1,8 +1,5 @@
 import React from "react"
 
-import usePageController from "@/app/usePageController"
-
-import NavBar from "@/app/components/NavBar"
 import { CheckIcon, MagnifyingGlassIcon as Search } from "@heroicons/react/24/solid"
 import { Input } from "@headlessui/react"
 

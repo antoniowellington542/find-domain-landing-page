@@ -2,6 +2,10 @@ import React from "react"
 
 import { PopoverGroup } from "@headlessui/react"
 
+import InstagramIcon from "@/assets/instagram_icon.svg"
+import LinkedingIcon from "@/assets/linkedin_icon.svg"
+import Image from "next/image"
+
 const Footer = () => {
     return (
         <footer
@@ -15,26 +19,28 @@ const Footer = () => {
                     <span className="text-3xl text-white">NandBox</span>
                 </div>
                 <PopoverGroup className="flex flex-col lg:flex-row flex-1 items-center gap-y-12 lg:gap-x-12">
-                    <a href="#" className="text-sm/6 font-semibold text-gray-500 hover:text-blue-500">
+                    <a href="#" className="text-sm/6 font-semibold text-gray-300 hover:text-blue-500">
                         Início
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-gray-500 hover:text-blue-500">
+                    <a href="#" className="text-sm/6 font-semibold text-gray-300 hover:text-blue-500">
                         Sobre
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-gray-500 hover:text-blue-500">
+                    <a href="#" className="text-sm/6 font-semibold text-gray-300 hover:text-blue-500">
                         Planos
                     </a>
-                    <a href="#" className="text-sm/6 font-semibold text-gray-500 hover:text-blue-500">
+                    <a href="#" className="text-sm/6 font-semibold text-gray-300 hover:text-blue-500">
                         FAQs
                     </a>
                 </PopoverGroup>
                 <div className="flex flex-1 justify-end gap-2">
-                    <img
-                        src="instagram_icon.svg"
+                    <Image
+                        alt="instagram"
+                        src={InstagramIcon}
                         className="h-8 w-auto"
                     />
-                    <img
-                        src="linkedin_icon.svg"
+                    <Image
+                        alt="linkedin"
+                        src={LinkedingIcon}
                         className="h-8 w-auto"
                     />
                 </div>

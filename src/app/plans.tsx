@@ -7,18 +7,18 @@ const plans: PlanCardProps[] = [
         title: "Plano Grátis",
         price: "0.0",
         benefits: [
-            <div className="flex flex-row items-center gap-2">
-                <MagnifyingGlassIcon className="size-4" />
-                <span className="text-[14px] font-light">Monitoramento de <span className="font-semibold">1 domínio</span></span>
-            </div>,
-            <div className="flex flex-row items-center gap-2">
-                <AtSymbolIcon className="size-4" />
-                <span className="text-[14px] font-light">Alerta por <span className="font-semibold">email</span></span>
-            </div>,
-            <div className="flex flex-row items-center gap-2">
-                <CalendarDaysIcon className="size-4" />
-                <span className="text-[14px] font-light">Aviso <span className="font-semibold">15 dias</span> antes da experição</span>
-            </div>
+            {
+                icon: <MagnifyingGlassIcon className="size-4" />,
+                description: <span className="text-[14px] font-light">Monitoramento de <span className="font-semibold">1 domínio</span></span>
+            },
+            {
+                icon: <AtSymbolIcon className="size-4" />,
+                description: <span className="text-[14px] font-light">Alerta por <span className="font-semibold">email</span></span>
+            },
+            {
+                icon: <CalendarDaysIcon className="size-4" />,
+                description: <span className="text-[14px] font-light">Aviso <span className="font-semibold">15 dias</span> antes da experição</span>
+            }
         ],
         customStyle: {
             backgroundColor: "#FFFFFF",
@@ -32,22 +32,22 @@ const plans: PlanCardProps[] = [
         title: "Plano Essencial",
         price: "9.90",
         benefits: [
-            <div className="flex flex-row items-center gap-2">
-                <MagnifyingGlassIcon className="size-4" />
-                <span className="text-[14px] font-light">Monitoramento de <span className="font-semibold">2 domínios</span></span>
-            </div>,
-            <div className="flex flex-row items-center gap-2">
-                <AtSymbolIcon className="size-4" />
-                <span className="text-[14px] font-light">Alertas por <span className="font-semibold">Email</span></span>
-            </div>,
-            <div className="flex flex-row items-center gap-2">
-                <MagnifyingGlassIcon className="size-4" />
-                <span className="text-[14px] font-light">Notificação por <span className="font-semibold">1 número(Whatsapp e SMS)</span></span>
-            </div>,
-            <div className="flex flex-row items-center gap-2">
-                <CalendarDaysIcon className="size-4" />
-                <span className="text-[14px] font-light">Avisos com <span className="font-semibold">30, 15, 5 e 1</span> dia de antecendência</span>
-            </div>
+            {
+                icon: <MagnifyingGlassIcon className="size-4" />,
+                description: <span className="text-[14px] font-light">Monitoramento de <span className="font-semibold">2 domínios</span></span>
+            },
+            {
+                icon: <AtSymbolIcon className="size-4" />,
+                description: <span className="text-[14px] font-light">Alertas por <span className="font-semibold">Email</span></span>
+            },
+            {
+                icon: <MagnifyingGlassIcon className="size-4" />,
+                description: <span className="text-[14px] font-light">Notificação por <span className="font-semibold">1 número(Whatsapp e SMS)</span></span>
+            },
+            {
+                icon: <CalendarDaysIcon className="size-4" />,
+                description: <span className="text-[14px] font-light">Avisos com <span className="font-semibold">30, 15, 5 e 1</span> dia de antecendência</span>
+            }
         ],
         customStyle: {
             backgroundColor: "#2b7fff",
@@ -61,26 +61,26 @@ const plans: PlanCardProps[] = [
         title: "Plano Profissional",
         price: "29.90",
         benefits: [
-            <div className="flex flex-row items-center gap-2">
-                <MagnifyingGlassIcon className="size-4" />
-                <span className="text-[14px] font-light">Monitoramento de <span className="font-semibold">5 domínios</span></span>
-            </div>,
-            <div className="flex flex-row items-center gap-2">
-                <AtSymbolIcon className="size-4" />
-                <span className="text-[14px] font-light">Alertas por <span className="font-semibold">Email, Whatsapp e SMS</span></span>
-            </div>,
-            <div className="flex flex-row items-center gap-2">
-                <DocumentTextIcon className="size-6" />
-                <span className="text-[14px] font-light">Avisos personalizados <span className="font-semibold">(você escolhe quando ser avisado)</span></span>
-            </div>,
-            <div className="flex flex-row items-center gap-2">
-                <FolderIcon className="size-4" />
-                <span className="text-[14px] font-light">Histórico de alterações de domínio</span>
-            </div>,
-            <div className="flex flex-row items-center gap-2">
-                <UserGroupIcon className="size-4" />
-                <span className="text-[14px] font-light">Acesso <span className="font-semibold">multiusuário (até 3 membros)</span></span>
-            </div>
+            {
+                icon: <MagnifyingGlassIcon className="size-4" />,
+                description: <span className="text-[14px] font-light">Monitoramento de <span className="font-semibold">5 domínios</span></span>
+            },
+            {
+                icon: <AtSymbolIcon className="size-4" />,
+                description: <span className="text-[14px] font-light">Alertas por <span className="font-semibold">Email, Whatsapp e SMS</span></span>
+            },
+            {
+                icon: <DocumentTextIcon className="size-6" />,
+                description: <span className="text-[14px] font-light">Avisos personalizados <span className="font-semibold">(você escolhe quando ser avisado)</span></span>
+            },
+            {
+                icon: <FolderIcon className="size-4" />,
+                description: <span className="text-[14px] font-light">Histórico de alterações de domínio</span>
+            },
+            {
+                icon: <UserGroupIcon className="size-4" />,
+                description: <span className="text-[14px] font-light">Acesso <span className="font-semibold">multiusuário (até 3 membros)</span></span>
+            }
         ],
         customStyle: {
             backgroundColor: "#FFFFFF",

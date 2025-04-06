@@ -1,5 +1,3 @@
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react"
-import { ChevronDownIcon } from "@heroicons/react/24/solid"
 import Accordion, { AccordionProps } from "@/app/components/Accordion"
 
 const items: Array<AccordionProps> = [
