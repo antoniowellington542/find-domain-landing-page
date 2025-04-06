@@ -19,7 +19,7 @@ const About = () => {
                     <div className="flex flex-1 flex-col gap-8">
                         <div className="flex flex-col items-center gap-4">
                             <h1 className="text-3xl lg:text-4xl text-gray-800 font-medium">Sobre nossa aplicação</h1>
-                            <p className="text-xl lg:text-2xl text-justify text-gray-600">
+                            <p className="text-xl text-justify text-gray-600">
                                 Nossa aplicação foi criada para facilitar a pesquisa e análise de dados de domínio de maneira rápida, simples
                                 e eficaz. Com ela, você pode acessar informações detalhadas sobre os domínios de seu interesse, como
                                 registros WHOIS, histórico de alterações e outros dados importantes, tudo em um único lugar.

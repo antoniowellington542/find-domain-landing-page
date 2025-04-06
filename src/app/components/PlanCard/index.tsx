@@ -27,7 +27,7 @@ const PlanCard = (props: PlanCardProps) => {
 
     return (
         <div
-            className={`flex justify-center w-[360px] h-[480px] rounded-2xl p-6 hover:scale-105 transition duration-700 ease-in-out shadow-md border border-gray-200`}
+            className={`flex justify-center w-[320px] h-[480px] rounded-2xl p-6 hover:scale-105 transition duration-700 ease-in-out shadow-md border border-gray-200`}
             style={{
                 backgroundColor: customStyle.backgroundColor
             }}
