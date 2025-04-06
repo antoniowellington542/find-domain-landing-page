@@ -16,7 +16,7 @@ const Accordion = (props: AccordionProps) => {
         <Disclosure
             as="div"
             className="bg-gray-100 rounded-xl p-6"
-            defaultOpen={true}
+            defaultOpen={false}
         >
             <DisclosureButton className="group flex w-full items-center justify-between">
                 <span className="text-[14px] font-semibold text-gray-600 group-data-[hover]:fill-gray-500">
