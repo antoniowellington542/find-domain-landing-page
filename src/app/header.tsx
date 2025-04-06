@@ -1,6 +1,6 @@
 import React from "react"
 
-import { CheckIcon, MagnifyingGlassIcon as Search } from "@heroicons/react/24/solid"
+import { MagnifyingGlassIcon as Search } from "@heroicons/react/24/solid"
 import { Input } from "@headlessui/react"
 import Image from "next/image"
 
