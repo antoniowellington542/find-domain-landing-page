@@ -6,43 +6,50 @@ import Image from "next/image"
 
 import HeaderImage from "@/assets/images/header.png"
 import ChecksIcon from "@/assets/checks_icon.svg"
+import usePageController from "@/app/usePageController"
 
 const Header = () => {
+    const {
+        handleGetDomainInfo,
+        searchvalue,
+        setSearchValue
+    } = usePageController()
+
     return (
         <section id="header" className="flex py-10 justify-center">
             <div className="flex flex-1 flex-col lg:flex-row items-center justify-center gap-4 py-10 lg:py-0">
                 <div className="flex flex-col flex-1/2 items-center justify-center gap-8">
                     <div className="flex flex-col gap-8">
                         <h1 className="text-3xl md:text-5xl text-left font-medium text-gray-800">A gente lembra. Você segue em frente</h1>
-                        <ul className="flex flex-col gap-4 lg:gap-0 text-gray-600 md:grid md:grid-cols-2">
+                        <ul className="flex flex-col gap-4 text-gray-600">
                             <li>
-                                <div className="flex flex-row items-start gap-1">
+                                <div className="flex flex-row items-center gap-1">
                                     <Image
                                         alt="header"
                                         src={ChecksIcon}
                                         className="h-6 w-6"
                                     />
-                                    <span className="text-[16px] text-wrap text-left text-blue-500">Alertas por WhatsApp e E-mail</span>
+                                    <span className="text-xl text-wrap text-left text-blue-500">Alertas por WhatsApp e E-mail</span>
                                 </div>
                             </li>
                             <li>
-                                <div className="flex flex-row items-start gap-1">
+                                <div className="flex flex-row items-center gap-1">
                                     <Image
                                         alt="header"
                                         src={ChecksIcon}
                                         className="h-6 w-6"
                                     />
-                                    <span className="text-[16px] text-wrap text-left text-blue-500">Comece em segundos - sem complicação</span>
+                                    <span className="text-xl text-wrap text-left text-blue-500">Comece em segundos - sem complicação</span>
                                 </div>
                             </li>
                             <li>
-                                <div className="flex flex-row items-start gap-1">
+                                <div className="flex flex-row items-center gap-1">
                                     <Image
                                         alt="header"
                                         src={ChecksIcon}
                                         className="h-6 w-6"
                                     />
-                                    <span className="text-[16px] text-wrap text-left text-blue-500">Evite surpresas com prazos e vencimentos</span>
+                                    <span className="text-xl text-wrap text-left text-blue-500">Evite surpresas com prazos e vencimentos</span>
                                 </div>
                             </li>
                         </ul>
@@ -53,10 +60,17 @@ const Header = () => {
                                 <Input
                                     type="text"
                                     placeholder="Pesquisar"
-                                    className="p-3 w-full text-sm text-white rounded-lg bg-blue-500 placeholder:text-white outline-none"
+                                    className="p-3 w-full text-sm text-white rounded-lg bg-blue-500 placeholder:text-white"
+                                    value={searchvalue}
+                                    onChange={(event) => {
+                                        setSearchValue(event.currentTarget.value)
+                                    }}
                                 />
                                 <div className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4">
-                                    <Search className="size-4 text-white" />
+                                    <Search
+                                        className="size-4 text-white hover:text-gray-500 cursor-pointer"
+                                        onClick={handleGetDomainInfo}
+                                    />
                                 </div>
                             </div>
                         </div>

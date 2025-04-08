@@ -8,17 +8,17 @@ const About = () => {
     return (
         <section id="about" className="flex items-center justify-center py-20">
             <div className="flex flex-1 flex-col lg:flex-row items-start justify-start gap-10">
-                <div className="flex flex-1/2 items-center justify-start">
+                <div className="flex flex-1/2 items-center justify-start order-2 md:order-1">
                     <Image
                         src={AboutImage}
                         alt="about image"
                         className="rounded-2xl"
                     />
                 </div>
-                <div className="flex flex-1/2">
+                <div className="flex flex-1/2 order-1 md:order-2">
                     <div className="flex flex-1 flex-col gap-8">
                         <div className="flex flex-col items-center gap-4">
-                            <h1 className="text-3xl lg:text-4xl text-gray-800 font-medium">Sobre nossa aplicação</h1>
+                            <h1 className="text-3xl md:text-5xl text-gray-800 font-medium">Sobre nossa aplicação</h1>
                             <p className="text-xl text-justify text-gray-600">
                                 Nossa aplicação foi criada para facilitar a pesquisa e análise de dados de domínio de maneira rápida, simples
                                 e eficaz. Com ela, você pode acessar informações detalhadas sobre os domínios de seu interesse, como

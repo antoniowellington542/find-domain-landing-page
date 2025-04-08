@@ -97,7 +97,7 @@ const Plans = () => {
         <section id="plans" className="flex items-center justify-center py-10">
             <div className="flex flex-1 flex-col items-center justify-items gap-2">
                 <span className="text-3xl lg:text-5xl text-gray-800 font-medium">Planos</span>
-                <div className="w-full flex flex-1 flex-col lg:flex-row items-center justify-center lg:justify-between py-12">
+                <div className="flex flex-1 flex-col lg:flex-row items-center justify-center gap-10 py-12">
                     {plans.map((plan, index) => (
                         <PlanCard
                             key={index}
